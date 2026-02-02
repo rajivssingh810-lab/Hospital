@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCare Hospital India - Complete Healthcare Services | 24/7 Emergency Care</title>
+    <meta name="description" content="LifeCare Hospital India provides comprehensive healthcare services including emergency care, ICU, cardiology, oncology, surgery, and all medical treatments. Expert doctors available 24/7 in Mumbai, India.">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0066CC;
+            --deep-blue: #003D7A;
+            --light-blue: #E8F4FF;
+            --accent-teal: #00A896;
+            --saffron: #FF9933;
+            --green: #138808;
+            --white: #FFFFFF;
+            --off-white: #F8FAFB;
+            --gray-100: #F5F7FA;
+            --gray-200: #E4E7EB;
+            --gray-300: #CBD2D9;
+            --gray-600: #4A5568;
+            --gray-800: #1A202C;
+            --red-emergency: #DC2626;
+            --green-success: #059669;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        .top-bar {
+            background: var(--deep-blue);
+            color: var(--white);
+            padding: 0.75rem 0;
+            font-size: 0.875rem;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .emergency-number {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--accent-teal);
+            animation: pulse-emergency 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-emergency {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            color: var(--primary-blue);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-800);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray-800);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 61, 122, 0.92), rgba(0, 168, 150, 0.88)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&h=900&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 5rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="none"/><path d="M0 50 Q 25 25, 50 50 T 100 50" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" fill="none"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--red-emergency);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #B91C1C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(135deg, var(--red-emergency), #EF4444);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--gray-100);
+            padding: 3rem 1.5rem;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.75rem;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            background: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.3), rgba(0, 168, 150, 0.3));
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--light-blue);
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Departments Grid */
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .department-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .department-card:hover {
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-5px);
+        }
+
+        .department-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            color: var(--white);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .department-card h3 {
+            font-size: 1.5rem;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        .department-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Emergency Section */
+        .emergency-section {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95), rgba(59, 130, 246, 0.95)),
+                        url('https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1600&h=900&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .emergency-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .emergency-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .emergency-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Doctors Grid */
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .doctor-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+        }
+
+        .doctor-card:hover {
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-5px);
+        }
+
+        .doctor-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .doctor-image-1 {
+            background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop');
+        }
+
+        .doctor-image-2 {
+            background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop');
+        }
+
+        .doctor-image-3 {
+            background-image: url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop');
+        }
+
+        .doctor-image-4 {
+            background-image: url('https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop');
+        }
+
+        .doctor-image-5 {
+            background-image: url('https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop');
+        }
+
+        .doctor-image-6 {
+            background-image: url('https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=400&h=400&fit=crop');
+        }
+
+        .doctor-info {
+            padding: 1.5rem;
+        }
+
+        .doctor-name {
+            font-size: 1.5rem;
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .doctor-specialty {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .doctor-experience {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* Appointment Form */
+        .appointment-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Manrope', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--accent-teal);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--deep-blue);
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            background: var(--gray-100);
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            background: var(--light-blue);
+            transform: translateX(5px);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            font-size: 1.25rem;
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            background: url('https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.7), rgba(0, 168, 150, 0.7));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-container::after {
+            content: '📍 Mumbai, Maharashtra, India';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-blue);
+            color: var(--white);
+            padding: 3rem 1.5rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Floating Action Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-xl);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            color: var(--white);
+        }
+
+        .floating-btn-emergency {
+            background: var(--red-emergency);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(220, 38, 38, 0);
+            }
+        }
+
+        .floating-btn-appointment {
+            background: var(--primary-blue);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.25rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .floating-buttons {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .appointment-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .top-bar-content {
+                font-size: 0.75rem;
+            }
+
+            .emergency-number {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-teal);
+            color: var(--white);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .india-flag {
+            display: inline-block;
+            width: 24px;
+            height: 16px;
+            background: linear-gradient(to bottom, var(--saffron) 0%, var(--saffron) 33%, white 33%, white 66%, var(--green) 66%, var(--green) 100%);
+            border-radius: 2px;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-item">
+                📧 info@lifecareindia.com
+            </div>
+            <div class="top-bar-item">
+                <strong>आपातकालीन / Emergency:</strong> <span class="emergency-number">📞 +91-9876-543-210</span>
+            </div>
+            <div class="top-bar-item">
+                ⏰ 24/7 उपलब्ध / Available
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">⚕️</div>
+                <span>LifeCare Hospital <span class="india-flag"></span></span>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#departments">Departments</a></li>
+                <li><a href="#emergency">Emergency & ICU</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🚨 24/7 आपातकालीन सेवाएं उपलब्ध | ICU & Critical Care | तत्काल चिकित्सा सहायता | कॉल करें: +91-9876-543-210
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>आपका स्वास्थ्य, हमारी प्राथमिकता</h1>
+            <p class="hero-tagline">Your Health, Our Priority - Complete Healthcare with Compassion</p>
+            <p class="hero-subtitle">विशेषज्ञ चिकित्सा देखभाल • उन्नत तकनीक • 24/7 आपातकालीन सेवाएं • अनुभवी डॉक्टर</p>
+            <div class="cta-buttons">
+                <a href="#appointments" class="btn btn-primary">📅 अपॉइंटमेंट बुक करें</a>
+                <a href="tel:+919876543210" class="btn btn-secondary">🚨 आपातकालीन कॉल</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years of Excellence<br>वर्षों का अनुभव</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Expert Doctors<br>विशेषज्ञ डॉक्टर</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2 Lakh+</div>
+                <div class="stat-label">Patients Treated<br>उपचारित मरीज</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Emergency Care<br>आपातकालीन देखभाल</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About LifeCare Hospital India</h2>
+                <p>भारत में विश्वस्तरीय स्वास्थ्य सेवा प्रदान करना, 25+ वर्षों से करुणा और उन्नत तकनीक के साथ</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <h3>Mission & Vision</h3>
+                    <p>LifeCare Hospital India में, हमारा मिशन प्रत्येक रोगी को करुणा, सम्मान और गरिमा के साथ व्यापक, उच्च गुणवत्ता वाली स्वास्थ्य सेवा प्रदान करना है। We are committed to excellence in medical treatment, cutting-edge technology, and patient safety.</p>
+                    <p>हम एक स्वस्थ समाज की कल्पना करते हैं जहां उन्नत चिकित्सा देखभाल सभी के लिए सुलभ हो, समर्पित स्वास्थ्य पेशेवरों की एक टीम द्वारा समर्थित जो रोगी कल्याण को सर्वोपरि रखते हैं।</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">👨‍⚕️</div>
+                            <div>
+                                <strong>Experienced Medical Team</strong><br>
+                                अनुभवी और प्रमाणित विशेषज्ञ डॉक्टर
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔬</div>
+                            <div>
+                                <strong>Advanced Technology</strong><br>
+                                अत्याधुनिक चिकित्सा उपकरण और सुविधाएं
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">❤️</div>
+                            <div>
+                                <strong>Patient-Focused Care</strong><br>
+                                व्यक्तिगत उपचार योजना और दयालु सेवा
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" style="background: var(--gray-100);">
+        <div class="container">
+            <div class="section-header">
+                <h2>हमारे विभाग और सेवाएं</h2>
+                <p>सभी चिकित्सा विशेषज्ञताओं को कवर करने वाले संपूर्ण स्वास्थ्य समाधान</p>
+            </div>
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-icon">🩺</div>
+                    <h3>General Medicine / सामान्य चिकित्सा</h3>
+                    <p>सामान्य बीमारियों के लिए व्यापक प्राथमिक देखभाल, पुरानी बीमारी प्रबंधन, निवारक स्वास्थ्य जांच और सामान्य चिकित्सा परामर्श।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🚑</div>
+                    <h3>Emergency Services / आपातकालीन सेवाएं</h3>
+                    <p>तीव्र प्रतिक्रिया टीम के साथ 24/7 आपातकालीन देखभाल, उन्नत ट्रॉमा केयर, एम्बुलेंस सेवाएं और तत्काल चिकित्सा हस्तक्षेप।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🏥</div>
+                    <h3>ICU (Intensive Care) / गहन चिकित्सा इकाई</h3>
+                    <p>वेंटिलेटर, निरंतर निगरानी, महत्वपूर्ण देखभाल विशेषज्ञों और उन्नत जीवन समर्थन प्रणालियों के साथ अत्याधुनिक गहन देखभाल इकाइयां।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">❤️</div>
+                    <h3>Cardiology / हृदय रोग विभाग</h3>
+                    <p>हृदय रोग का उपचार, कार्डियक कैथीटेराइजेशन, ईसीजी, इकोकार्डियोग्राफी और व्यापक हृदय संबंधी सेवाएं। Heart attack treatment available 24/7.</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🎗️</div>
+                    <h3>Oncology / कैंसर विभाग</h3>
+                    <p>कीमोथेरेपी, रेडिएशन थेरेपी, इम्यूनोथेरेपी और व्यापक कैंसर देखभाल कार्यक्रमों सहित उन्नत कैंसर निदान और उपचार।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🔪</div>
+                    <h3>Surgery / शल्य चिकित्सा</h3>
+                    <p>सामान्य सर्जरी, लैप्रोस्कोपिक प्रक्रियाओं, न्यूनतम इनवेसिव सर्जरी और पोस्ट-ऑपरेटिव देखभाल के लिए आधुनिक सर्जिकल सुविधाएं।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">👶</div>
+                    <h3>Pediatrics / बाल रोग</h3>
+                    <p>टीकाकरण, विकास निगरानी और बाल चिकित्सा आपातकालीन सेवाओं सहित शिशुओं, बच्चों और किशोरों के लिए विशेष देखभाल।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🦴</div>
+                    <h3>Orthopedics / आर्थोपेडिक्स</h3>
+                    <p>फ्रैक्चर उपचार, संयुक्त प्रतिस्थापन, खेल चोटें और आर्थोपेडिक पुनर्वास सहित विशेषज्ञ हड्डी और जोड़ों की देखभाल।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">👩</div>
+                    <h3>Gynecology / स्त्री रोग</h3>
+                    <p>प्रसवपूर्व देखभाल, प्रसव, स्त्री रोग संबंधी सर्जरी और प्रजनन स्वास्थ्य सहित व्यापक महिला स्वास्थ्य सेवाएं।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🧠</div>
+                    <h3>Neurology / न्यूरोलॉजी</h3>
+                    <p>मस्तिष्क और तंत्रिका तंत्र विकारों, स्ट्रोक उपचार, मिर्गी प्रबंधन और न्यूरो-पुनर्वास के लिए उन्नत न्यूरोलॉजिकल देखभाल।</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🔬</div>
+                    <h3>Diagnostics & Lab / निदान प्रयोगशाला</h3>
+                    <p>रक्त परीक्षण, इमेजिंग (एक्स-रे, सीटी, एमआरआई, अल्ट्रासाउंड), पैथोलॉजी और क्लिनिकल प्रयोगशाला सेवाओं सहित संपूर्ण नैदानिक सेवाएं।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency & ICU Section -->
+    <section id="emergency" class="emergency-section">
+        <div class="container">
+            <div class="section-header" style="color: var(--white);">
+                <span class="badge">24/7 उपलब्ध / AVAILABLE 24/7</span>
+                <h2 style="color: var(--white);">आपातकालीन और महत्वपूर्ण देखभाल</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">चौबीसों घंटे आपातकालीन सेवाएं उन्नत ICU सुविधाओं और विशेषज्ञ महत्वपूर्ण देखभाल विशेषज्ञों के साथ किसी भी चिकित्सा आपातकाल को संभालने के लिए तैयार।</p>
+            </div>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <h3>🚨 24/7 Emergency Room</h3>
+                    <p>अनुभवी आपातकालीन चिकित्सकों के साथ पूरी तरह से सुसज्जित आपातकालीन विभाग, तीव्र ट्राइएज सिस्टम, हृदय रोग, स्ट्रोक, दुर्घटनाओं और आघात सहित सभी चिकित्सा आपात स्थितियों के लिए तत्काल उपचार।</p>
+                </div>
+                <div class="emergency-card">
+                    <h3>🚑 Ambulance Services</h3>
+                    <p>प्रशिक्षित पैरामेडिक्स, आपातकालीन चिकित्सा उपकरण और जीपीएस-सक्षम तीव्र प्रतिक्रिया के साथ 24/7 उन्नत जीवन समर्थन एम्बुलेंस, मुंबई शहर में कहीं भी मिनटों में पहुंचने के लिए।</p>
+                </div>
+                <div class="emergency-card">
+                    <h3>🏥 Intensive Care Unit</h3>
+                    <p>निरंतर रोगी निगरानी, वेंटिलेटर, डायलिसिस समर्थन, समर्पित महत्वपूर्ण देखभाल विशेषज्ञों और नर्स-से-रोगी अनुपात के साथ अत्याधुनिक ICU व्यक्तिगत ध्यान सुनिश्चित करता है।</p>
+                </div>
+                <div class="emergency-card">
+                    <h3>⚡ Trauma Care Center</h3>
+                    <p>दुर्घटना पीड़ितों, गंभीर चोटों और गंभीर स्थितियों के लिए तत्काल सर्जिकल हस्तक्षेप क्षमताओं और उन्नत जीवन समर्थन प्रणालियों के साथ विशेष ट्रॉमा टीम।</p>
+                </div>
+                <div class="emergency-card">
+                    <h3>💉 Critical Care Specialists</h3>
+                    <p>जटिल चिकित्सा स्थितियों को प्रबंधित करने और विशेषज्ञ आपातकालीन हस्तक्षेप प्रदान करने के लिए चौबीसों घंटे उपलब्ध बोर्ड-प्रमाणित इंटेंसिविस्ट और क्रिटिकल केयर नर्स।</p>
+                </div>
+                <div class="emergency-card">
+                    <h3>🫀 Cardiac Emergency Care</h3>
+                    <p>कैथीटेराइजेशन लैब, ईसीजी और कार्डियोलॉजिस्ट द्वारा तत्काल हस्तक्षेप के साथ हृदय रोगों और हृदय आपात स्थितियों के लिए समर्पित कार्डियक आपातकालीन इकाई।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2>हमारी विशेषज्ञ चिकित्सा टीम</h2>
+                <p>हमारे उच्च योग्य और अनुभवी डॉक्टरों से मिलें जो आपको सर्वोत्तम चिकित्सा देखभाल प्रदान करने के लिए समर्पित हैं</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image doctor-image-1"></div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Rajesh Sharma</h3>
+                        <p class="doctor-specialty">Chief Cardiologist / मुख्य हृदय रोग विशेषज्ञ</p>
+                        <p class="doctor-experience">25+ years experience | MD, DM, FACC<br>Heart Attack Treatment & Cardiac Care Specialist</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image doctor-image-2"></div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Priya Patel</h3>
+                        <p class="doctor-specialty">Oncologist / कैंसर विशेषज्ञ</p>
+                        <p class="doctor-experience">20+ years experience | MD, DM Oncology<br>Expert in Cancer Diagnosis & Treatment</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image doctor-image-3"></div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Amit Kumar</h3>
+                        <p class="doctor-specialty">Emergency Medicine Specialist</p>
+                        <p class="doctor-experience">18+ years experience | MD, MBBS<br>Expert in Trauma & Critical Care / आपातकालीन विशेषज्ञ</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image doctor-image-4"></div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Sneha Reddy</h3>
+                        <p class="doctor-specialty">Pediatric Specialist / बाल रोग विशेषज्ञ</p>
+                        <p class="doctor-experience">15+ years experience | MD Pediatrics<br>Expert in Child Health & Development</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image doctor-image-5"></div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Vikram Singh</h3>
+                        <p class="doctor-specialty">Neurologist / मस्तिष्क रोग विशेषज्ञ</p>
+                        <p class="doctor-experience">22+ years experience | MD, DM Neurology<br>Specialist in Stroke & Brain Disorders</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image doctor-image-6"></div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Kavita Desai</h3>
+                        <p class="doctor-specialty">Orthopedic Surgeon / आर्थोपेडिक सर्जन</p>
+                        <p class="doctor-experience">17+ years experience | MS Ortho, FRCS<br>Expert in Joint Replacement & Trauma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointments Section -->
+    <section id="appointments" style="background: var(--light-blue);">
+        <div class="container">
+            <div class="section-header">
+                <h2>अपॉइंटमेंट बुक करें</h2>
+                <p>हमारे विशेषज्ञ डॉक्टरों के साथ अपनी यात्रा निर्धारित करें। नीचे दिया गया फॉर्म भरें और हम शीघ्र ही आपकी अपॉइंटमेंट की पुष्टि करेंगे।</p>
+            </div>
+            <form class="appointment-form" onsubmit="handleAppointment(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">पूरा नाम / Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="अपना पूरा नाम दर्ज करें">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">फोन नंबर / Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91-98765-43210">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">ईमेल / Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">पसंदीदा तारीख / Preferred Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">विभाग / Department *</label>
+                        <select id="department" name="department" required>
+                            <option value="">विभाग चुनें / Select Department</option>
+                            <option value="general">General Medicine / सामान्य चिकित्सा</option>
+                            <option value="cardiology">Cardiology / हृदय रोग</option>
+                            <option value="oncology">Oncology / कैंसर विभाग</option>
+                            <option value="orthopedics">Orthopedics / आर्थोपेडिक्स</option>
+                            <option value="pediatrics">Pediatrics / बाल रोग</option>
+                            <option value="gynecology">Gynecology / स्त्री रोग</option>
+                            <option value="neurology">Neurology / न्यूरोलॉजी</option>
+                            <option value="surgery">Surgery / शल्य चिकित्सा</option>
+                            <option value="emergency">Emergency / आपातकालीन</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">पसंदीदा समय / Preferred Time</label>
+                        <select id="time" name="time">
+                            <option value="">समय चुनें / Select Time</option>
+                            <option value="morning">Morning / सुबह (9 AM - 12 PM)</option>
+                            <option value="afternoon">Afternoon / दोपहर (12 PM - 4 PM)</option>
+                            <option value="evening">Evening / शाम (4 PM - 8 PM)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">यात्रा का कारण / Reason for Visit</label>
+                    <textarea id="message" name="message" placeholder="कृपया अपने लक्षण या यात्रा का कारण बताएं / Please describe your symptoms"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">📅 अपॉइंटमेंट बुक करें / Book Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Patient Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>रोगी सेवाएं और सुविधाएं</h2>
+                <p>हम आपकी स्वास्थ्य यात्रा के दौरान आपके आराम और सुविधा को सुनिश्चित करने के लिए व्यापक रोगी सहायता सेवाएं प्रदान करते हैं।</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">💳</div>
+                    <div>
+                        <strong>Insurance Support / बीमा सहायता</strong><br>
+                        All major insurance companies accepted
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">💰</div>
+                    <div>
+                        <strong>Cashless Treatment / कैशलेस उपचार</strong><br>
+                        सभी प्रमुख बीमा कंपनियों के साथ
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">💊</div>
+                    <div>
+                        <strong>24/7 Pharmacy / फार्मेसी</strong><br>
+                        In-house pharmacy with all medicines
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🛏️</div>
+                    <div>
+                        <strong>Private AC Rooms / निजी कमरे</strong><br>
+                        आरामदायक एसी कमरे उपलब्ध
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🍽️</div>
+                    <div>
+                        <strong>Cafeteria Services / कैफेटेरिया</strong><br>
+                        पौष्टिक भोजन उपलब्ध
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🚗</div>
+                    <div>
+                        <strong>Parking Facility / पार्किंग</strong><br>
+                        पर्याप्त पार्किंग स्थान
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📋</div>
+                    <div>
+                        <strong>Medical Records / चिकित्सा रिकॉर्ड</strong><br>
+                        Digital health records maintained
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🤝</div>
+                    <div>
+                        <strong>Patient Assistance / रोगी सहायता</strong><br>
+                        समर्पित सहायता टीम 24/7
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="background: var(--gray-100);">
+        <div class="container">
+            <div class="section-header">
+                <h2>हमारे मरीज क्या कहते हैं</h2>
+                <p>उन लोगों के वास्तविक अनुभव जिनकी हमें सेवा करने का सौभाग्य मिला है</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"LifeCare की आपातकालीन टीम ने हृदय रोग के दौरान मेरे पिता की जान बचाई। उनकी तेज़ प्रतिक्रिया और विशेषज्ञ देखभाल ने सब कुछ बदल दिया। हम हमेशा के लिए आभारी हैं।"</p>
+                    <p class="testimonial-author">रोहित शर्मा / Rohit Sharma</p>
+                    <p class="testimonial-role">Patient Family Member / मरीज के परिवार के सदस्य</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Dr. Priya Patel और ऑन्कोलॉजी टीम ने असाधारण कैंसर उपचार और भावनात्मक समर्थन प्रदान किया। मेरी यात्रा के दौरान मुझे जो देखभाल और करुणा मिली वह वास्तव में उल्लेखनीय थी।"</p>
+                    <p class="testimonial-author">सुनीता पटेल / Sunita Patel</p>
+                    <p class="testimonial-role">Cancer Survivor / कैंसर उत्तरजीवी</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"बाल रोग देखभाल से लेकर आपातकालीन सेवाओं तक, LifeCare Hospital वर्षों से हमारे परिवार का विश्वसनीय स्वास्थ्य भागीदार रहा है। डॉक्टर जानकार हैं और वास्तव में परवाह करते हैं।"</p>
+                    <p class="testimonial-author">अनिता देसाई / Anita Desai</p>
+                    <p class="testimonial-role">Long-term Patient / दीर्घकालिक रोगी</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>संपर्क करें / Contact Us</h2>
+                <p>अपॉइंटमेंट, पूछताछ या आपातकालीन सहायता के लिए हमसे संपर्क करें</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Hospital Address / अस्पताल का पता</h3>
+                            <p>LifeCare Hospital Complex<br>Sector 15, Airoli<br>Navi Mumbai, Maharashtra 400708<br>भारत / India</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone Numbers / फोन नंबर</h3>
+                            <p>
+                                <strong>आपातकालीन / Emergency:</strong> <a href="tel:+919876543210">+91-9876-543-210</a><br>
+                                <strong>Main Line:</strong> <a href="tel:+912267891234">+91-22-6789-1234</a><br>
+                                <strong>Appointments:</strong> <a href="tel:+912267891235">+91-22-6789-1235</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email & Hours / ईमेल और समय</h3>
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:info@lifecareindia.com">info@lifecareindia.com</a><br>
+                                <strong>Emergency:</strong> 24/7 उपलब्ध / Available<br>
+                                <strong>OPD Hours:</strong> सोम-शनि, 8 AM - 8 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LifeCare Hospital India</h3>
+                <p>स्वास्थ्य सेवा में आपका विश्वसनीय साथी, 25+ वर्षों से करुणा और उत्कृष्टता के साथ व्यापक चिकित्सा सेवाएं प्रदान कर रहा है।</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us / हमारे बारे में</a></li>
+                    <li><a href="#departments">Departments / विभाग</a></li>
+                    <li><a href="#doctors">Our Doctors / हमारे डॉक्टर</a></li>
+                    <li><a href="#appointments">Book Appointment / अपॉइंटमेंट</a></li>
+                    <li><a href="#emergency">Emergency Care / आपातकालीन</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Departments / विभाग</h3>
+                <ul>
+                    <li><a href="#departments">Cardiology / हृदय रोग</a></li>
+                    <li><a href="#departments">Oncology / कैंसर विभाग</a></li>
+                    <li><a href="#departments">Emergency / आपातकालीन</a></li>
+                    <li><a href="#departments">ICU / गहन चिकित्सा</a></li>
+                    <li><a href="#departments">Surgery / शल्य चिकित्सा</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Emergency Contact / आपातकालीन संपर्क</h3>
+                <p><strong>24/7 Emergency Hotline:</strong><br>
+                <a href="tel:+919876543210" style="font-size: 1.25rem; color: var(--accent-teal);">📞 +91-9876-543-210</a></p>
+                <p style="margin-top: 1rem;">
+                    <strong>Address / पता:</strong><br>
+                    Sector 15, Airoli<br>
+                    Navi Mumbai, Maharashtra 400708
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LifeCare Hospital India. All rights reserved. | स्वास्थ्य सेवा में उत्कृष्टता के लिए प्रतिबद्ध</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+919876543210" class="floating-btn floating-btn-emergency" title="आपातकालीन कॉल / Emergency Call">
+            🚨
+        </a>
+        <a href="#appointments" class="floating-btn floating-btn-appointment" title="अपॉइंटमेंट / Book Appointment">
+            📅
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleAppointment(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            alert('अपॉइंटमेंट बुक करने के लिए धन्यवाद! हमारी टीम आपकी अपॉइंटमेंट की पुष्टि करने के लिए शीघ्र ही आपसे संपर्क करेगी।\n\nThank you for booking an appointment! Our team will contact you shortly to confirm.\n\nName: ' + data.name + '\nPhone: ' + data.phone + '\nDate: ' + data.date + '\nDepartment: ' + data.department);
+            
+            event.target.reset();
+            console.log('Appointment data:', data);
+        }
+
+        // Set minimum date for appointment to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.department-card, .doctor-card, .stat-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Active navigation link highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
